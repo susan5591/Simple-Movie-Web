@@ -7,7 +7,7 @@ import { BrowserRouter ,Link } from 'react-router-dom'
 const Movies = () => {
   const [search,setSerach] = useState('')
   console.log(search)
-  const {data} = useContext(AppContext)
+  const data = useContext(AppContext)
   const temp = data.filter((item)=>item.name.includes(search))
   return (
     <div className='movies'>

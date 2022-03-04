@@ -1,11 +1,11 @@
 import React,{useContext} from 'react'
-import { AppContext } from '../context'
+import watchContext from './DetailPage'
 
 const WatchList = () => {
-  const {watch} =  useContext(AppContext)
+  const watch =  useContext(watchContext)
   console.log(watch)
   return (
-    <div></div>
+    <div>susan</div>
   )
 }
 

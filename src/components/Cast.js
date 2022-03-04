@@ -3,7 +3,7 @@ import '../css/cast.css'
 const Cast = (temp) => {
   // console.log(temp)
   const {cast}=temp
-  console.log(cast)
+  // console.log(cast)
   return (
     <div className='casting-top'>
       {

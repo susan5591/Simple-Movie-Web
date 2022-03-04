@@ -14,9 +14,8 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [watch,setWatch] = useState([])
   return (
-    <AppContext.Provider value={{data,watch,setWatch}}>
+    <AppContext.Provider value={data}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -24,7 +23,7 @@ function App() {
           <Route path="watchlist" element={<WatchList />}/>
           <Route path=":id" element={<DetailPage />} />
           {/* <Route path=":id/details" element={<Detail />} /> */}
-          <Route path=":id/cast" element={<Cast />} />
+          {/* <Route path=":id/cast" element={<Cast />} /> */}
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>  

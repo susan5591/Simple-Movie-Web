@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/details.css'
 
 const Detail = ({temp}) => {
-  console.log(temp)
+  // console.log(temp)
   const {name,Genre,screenshots,videocard,poster,details,duration} = temp
 
   return (
