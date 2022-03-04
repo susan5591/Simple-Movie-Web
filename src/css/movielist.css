@@ -1,0 +1,9 @@
+.movie-list{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+.movie-list a{
+    color: black;
+}

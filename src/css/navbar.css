@@ -1,0 +1,25 @@
+.navbar{
+    padding-left: 37%;
+    background-color: rgb(9, 54, 151);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+ul li{    
+    list-style: none;
+    display: inline-block;
+}
+
+a{    
+    
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    padding:0 20px;
+}
+.icon{
+    padding-top: 20px;
+    padding-right: 30px;
+    align-items: center;
+}

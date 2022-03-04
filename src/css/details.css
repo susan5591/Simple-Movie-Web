@@ -1,0 +1,19 @@
+.details{
+    margin: auto;
+    width: 90%;
+}
+
+.flex-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-watchlist{
+    width: 10rem;
+}
+
+.add-watchlist button{
+    padding: 6px;
+    border-radius: 10px;
+}
