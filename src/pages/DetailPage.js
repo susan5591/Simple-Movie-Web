@@ -4,15 +4,13 @@ import '../css/details.css'
 import {AppContext} from '../context'
 import Detail from '../components/Detail'
 import Cast from '../components/Cast'
-import WatchList from './WatchList'
 
 const DetailPage = () => { 
   const [display,setDisplay] = useState(true)
-  const data = useContext(AppContext)
+  const {data,watch,setWatch} = useContext(AppContext)
   const {id}= useParams()
   const temp = data.find((item)=>item.id===parseInt(id))
   const {poster} = temp
-  const [watch,setWatch] = useState([])
   const addWatchlist = ()=>{
     setWatch({...watch,temp})
     console.log(watch)
@@ -26,15 +24,7 @@ const DetailPage = () => {
     setDisplay(false)
   }
 
-  // const watchContext = React.createContext()
-  // const watchProvider = () =>{
-  //   return (<watchContext.Provider value={watch}>
-  //     <WatchList />
-  //   </watchContext.Provider>    
-  //   )
-  // }
 
-  // watchProvider()
 
   return (
     <div className='details'>

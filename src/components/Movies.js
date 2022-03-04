@@ -2,12 +2,11 @@ import React, { useState,useContext } from 'react'
 import '../css/movies.css'
 import {AppContext} from '../context'
 import MovieList from './MovieList'
-import { BrowserRouter ,Link } from 'react-router-dom'
 
 const Movies = () => {
   const [search,setSerach] = useState('')
   console.log(search)
-  const data = useContext(AppContext)
+  const {data} = useContext(AppContext)
   const temp = data.filter((item)=>item.name.includes(search))
   return (
     <div className='movies'>
