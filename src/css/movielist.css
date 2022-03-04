@@ -1,8 +1,8 @@
 .movie-list{
-    color: black;
+    /* color: black; */
     display: flex;
     justify-content: space-around;
 }
-.movie-list a{
+/* .movie-list a{
     color: black;
-}
+} */

@@ -2,20 +2,31 @@ import React,{useContext,useState} from 'react'
 import { useParams } from 'react-router-dom'
 import '../css/details.css'
 import {AppContext} from '../context'
-import {
-  Link
-} from "react-router-dom";
+import Detail from '../components/Detail'
+import Cast from '../components/Cast'
 
 const DetailPage = () => {
+  const [display,setDisplay] = useState(true)
   const [watch,setWatch] = useState([])
   const list = useContext(AppContext)
   const {id}= useParams()
   const temp = list.find((item)=>item.id===parseInt(id))
-  const {name,Genre,screenshots,videocard,poster,details,duration} = temp
+  const {poster} = temp
   const addWatchlist = ()=>{
     setWatch(poster)
     console.log(watch)
   }  
+
+  
+
+  const changeDisplay= ()=>{
+    setDisplay(true)
+  }
+
+  const changeCast=()=>{
+    setDisplay(false)
+  }
+  console.log(display)
   return (
     <div className='details'>
     {/* first part */}
@@ -35,38 +46,17 @@ const DetailPage = () => {
         </div>
         {/* right part */}
         <div className='left-side'>
-          {/* urls */}
           <div className='left-top'>
             <div className="inside-details">
-              <Link to={`/${id}`}>Details</Link>
+              <button onClick={changeDisplay}>Details</button>
             </div>
             <div className="inside-details">
-              <Link to={`/${id}/cast`}>Cast</Link>
+              <button onClick={changeCast}>Cast</button>
             </div>
           </div>
-          {/* middle title and video */}
-          <div className='left-middle'>
-              <div>
-                <h2>{name}</h2>
-                <p className='paragraph genre'>{Genre}</p>
-                <p className='paragraph duration'>{duration}</p>
-                <p>{details}</p>
-              </div>
-              <div className='videocart'>
-                <img src={videocard} alt='videocard' />
-              </div>
-          </div>
-          {/* screenshots */}
-          <div className='left-bot'>
-              <h1>screenshots</h1>
-              <div className='screen-shots'>
-                {
-                  screenshots.map((item,index)=>{
-                    return <img key={index} src={item} alt='screenshots'/>
-                  })
-                }
-              </div>
-          </div>          
+          {
+            display?<Detail temp={temp}/>:<Cast {...temp}/>
+          }       
         </div>        
       </div>     
     </div>
