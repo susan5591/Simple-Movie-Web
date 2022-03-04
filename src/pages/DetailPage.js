@@ -7,17 +7,15 @@ import Cast from '../components/Cast'
 
 const DetailPage = () => {
   const [display,setDisplay] = useState(true)
-  const [watch,setWatch] = useState([])
-  const list = useContext(AppContext)
+  // const [watch,setWatch] = useState([])
+  const {data,setWatch,watch} = useContext(AppContext)
   const {id}= useParams()
-  const temp = list.find((item)=>item.id===parseInt(id))
+  const temp = data.find((item)=>item.id===parseInt(id))
   const {poster} = temp
   const addWatchlist = ()=>{
-    setWatch(poster)
+    setWatch({...watch,temp})
     console.log(watch)
-  }  
-
-  
+  }   
 
   const changeDisplay= ()=>{
     setDisplay(true)

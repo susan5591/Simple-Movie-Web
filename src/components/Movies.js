@@ -7,8 +7,8 @@ import { BrowserRouter ,Link } from 'react-router-dom'
 const Movies = () => {
   const [search,setSerach] = useState('')
   console.log(search)
-  const list = useContext(AppContext)
-  const temp = list.filter((item)=>item.name.includes(search))
+  const {data} = useContext(AppContext)
+  const temp = data.filter((item)=>item.name.includes(search))
   return (
     <div className='movies'>
       <div className='flex-page'>
@@ -29,7 +29,7 @@ const Movies = () => {
         {
           search ?temp.map((item)=>{
             return <MovieList  key={item.id} {...item}/>
-          }):list.map((item)=>{
+          }):data.map((item)=>{
             return <MovieList  key={item.id} {...item}/>
           })
         }

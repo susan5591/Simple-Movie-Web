@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home'
 import WatchList from './pages/WatchList';
@@ -14,8 +14,9 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [watch,setWatch] = useState([])
   return (
-    <AppContext.Provider value={data}>
+    <AppContext.Provider value={{data,watch,setWatch}}>
       <BrowserRouter>
         <Navbar />
         <Routes>

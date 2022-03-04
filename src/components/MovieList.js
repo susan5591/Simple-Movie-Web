@@ -1,6 +1,4 @@
 import React from 'react'
-import titanic from '../moviesImg/titanic.jpg'
-
 import { BrowserRouter ,Link } from 'react-router-dom'
 import '../css/movielist.css'
 
