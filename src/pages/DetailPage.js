@@ -24,8 +24,6 @@ const DetailPage = () => {
     setDisplay(false)
   }
 
-
-
   return (
     <div className='details'>
     {/* first part */}

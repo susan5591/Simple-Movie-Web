@@ -9,7 +9,9 @@ const WatchList = () => {
     <div className='poster'>
       {
         watch.map((item)=>{
-          return <img src={item.poster} alt='watchlist poster' />
+          return <div className='poster-under'>
+              <img src={item.poster} alt='watchlist poster' />
+            </div>
         })
       }
     </div>
