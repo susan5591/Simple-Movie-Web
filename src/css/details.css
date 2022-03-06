@@ -4,8 +4,11 @@
 }
 .detail-div{
     width: 100%;
+    margin: auto;
 }
 .flex-page{    
+    width: 100%;
+    margin: auto;
     display: flex;
    justify-content: space-between;
 }
@@ -37,7 +40,7 @@
 
 .left-side{
     padding-left:2rem;
-    width: 60%;
+    width: 70%;
     justify-content: space-between;
 }
 
