@@ -9,9 +9,9 @@
     justify-content: flex-start;
 }
 
-.casting{
+/* .casting{
     display: inline-block;
-}
+} */
 
 .small-img{
     padding: 0 10px;
@@ -25,8 +25,7 @@
     height: 100%;
     display: block;
 }
-.small-img p{
-    
+.small-img p{    
     color: black;
     font-size: 0.5rem;
     display: block;

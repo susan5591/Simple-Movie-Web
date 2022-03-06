@@ -6,7 +6,6 @@
 .poster-under{
     display: flex;
     flex-wrap: wrap;
-    /* flex-basis:20%; */
     height: 500px;
     width: 200px;
     overflow: hidden;

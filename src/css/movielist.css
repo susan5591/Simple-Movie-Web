@@ -1,8 +1,12 @@
 .movie-list{
-    /* color: black; */
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    width: 200px;
+    overflow: hidden;
 }
-/* .movie-list a{
-    color: black;
-} */
+.movie-list img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

@@ -5,7 +5,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({children}) =>{
     const [watch,setWatch] = useState([])
-    console.log(watch)
+    // console.log(watch)
     return (
         <AppContext.Provider value={{data,watch,setWatch}}>
           {children}

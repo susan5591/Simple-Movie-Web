@@ -7,14 +7,15 @@ const WatchList = () => {
   const newData = new Set(watch.map((item)=>item))
   // console.log(newData)
   const arr = Array.from(newData)
+  //const arr = [...newData]
 
-  console.log(arr)
+  // console.log(arr)
 
   return (
     <div className='poster'>
       {
-        arr.map((item)=>{
-          return <div className='poster-under'>
+        arr.map((item,index)=>{
+          return <div className='poster-under' key={index}>
               <img src={item.poster} alt='watchlist poster' />
             </div>
         })

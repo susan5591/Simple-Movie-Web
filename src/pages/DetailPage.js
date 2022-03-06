@@ -45,10 +45,18 @@ const DetailPage = () => {
         <div className='left-side'>
           <div className='left-top'>
             <div className="inside-details">
-              <button onClick={changeDisplay}>Details</button>
+              <button 
+                onClick={changeDisplay} 
+                className={`${display ?'underline':'none'}`}>
+                  Details
+              </button>
             </div>
             <div className="inside-details">
-              <button onClick={changeCast}>Cast</button>
+              <button 
+                onClick={changeCast} 
+                className={`${!display ?'underline':'none'}`}>
+                  Cast
+                </button>
             </div>
           </div>
           {
