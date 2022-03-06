@@ -1,11 +1,18 @@
 import React,{useContext} from 'react'
-import watchContext from './DetailPage'
+import {AppContext} from '../context'
+import '../css/poster.css'
 
 const WatchList = () => {
-  const watch =  useContext(watchContext)
+  const {watch} =  useContext(AppContext)
   console.log(watch)
   return (
-    <div>susan</div>
+    <div className='poster'>
+      {
+        watch.map((item)=>{
+          return <img src={item.poster} alt='watchlist poster' />
+        })
+      }
+    </div>
   )
 }
 
