@@ -12,8 +12,13 @@ const DetailPage = () => {
   const temp = data.find((item)=>item.id===parseInt(id))
   const {poster} = temp
   const addWatchlist = ()=>{
-    setWatch([...watch,temp])
-    // console.log(watch)
+    if(watch.indexOf(temp)!==-1){
+      setWatch([...watch])
+    }
+    else{
+      setWatch([...watch,temp])
+    }
+    console.log(watch)
   }   
 
   const changeDisplay= ()=>{
