@@ -22,8 +22,10 @@ const WatchList = () => {
         watch.map((item,index)=>{
           return <div className='poster-under' key={index}>
               {/* <img src={item.poster} alt='watchlist poster' /> */}
-              <Link to={`/${item.id}`}><img src={item.poster} alt='watchlist poster' /></Link>
-              <button onClick={()=>removeItem(item.id)}>Remove</button>
+              <div className='imaging'>
+                <Link to={`/${item.id}`}><img src={item.poster} alt='watchlist poster' /></Link>
+                <button className='remove' onClick={()=>removeItem(item.id)}>Remove</button>
+              </div>
             </div>
         })
       }

@@ -4,17 +4,31 @@
 }
 
 .poster-under{
+    margin-left: 10px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    height: 500px;
-    width: 200px;
-    overflow: hidden;
+    
 } 
 
-.poster-under img{
-    padding: 0 5px;
-    width: 100%;
-    height: 400px;
-    display: block;
-    object-fit: contain;
+.imaging{
+    height: 300px;
+    position: relative;
 }
+
+.imaging a img{
+    width: 100%;
+    height: 250px;
+    display: block;    
+}
+
+.imaging button{
+    width: 100%;
+    cursor: pointer;
+}
+
+.remove{
+    position: absolute;
+    top: 76.8%;
+}
+

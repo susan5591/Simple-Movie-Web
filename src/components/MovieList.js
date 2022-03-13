@@ -7,7 +7,9 @@ const MovieList = (item) => {
     const {id,poster} = item
     return (
         <div key={id} className='movie-list'>
-            <Link to={`/${id}`}><img src={poster} alt='logo' /></Link>
+            <div className='list-movie'>
+                <Link to={`/${id}`}><img src={poster} alt='logo' /></Link>
+            </div>
         </div>
     )
 }
